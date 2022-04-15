@@ -120,10 +120,12 @@ header > button {
       -ms-flex-pack: start;
           justify-content: start;
   font-family: "Nunito", sans-serif;
-  background-color: white;
+  background-color: #e71010;
+  border-radius: 10px;
   width: 328px;
-  height: 254px;
-  margin-top: 20px;
+  max-height: 254px;
+  padding: 20px 0 20px 0;
+  margin-bottom: 20px;
   text-align: center;
   text-overflow: ellipsis;
 }
@@ -131,15 +133,19 @@ header > button {
 .get .card p {
   font-size: 16px;
   line-height: 26px;
-  margin-top: 20px;
 }
 
 .get .card > img {
   width: 70px;
   height: 70px;
+  border-radius: 35px;
+  margin-bottom: 20px;
+}
+
+.get .card > .name {
+  margin-bottom: 20px;
 }
 
 .get .card .phone {
   margin: 0;
 }
-/*# sourceMappingURL=styles.css.map */

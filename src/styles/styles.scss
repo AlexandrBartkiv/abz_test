@@ -83,20 +83,27 @@ header{
         align-items: center;
         justify-content: start;
         font-family: $font;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(231, 16, 16);
+        border-radius: 10px;
         width: 328px;
-        height: 254px;
-        margin-top: 20px;
+        max-height: 254px;
+        padding: 20px 0 20px 0;
+        margin-bottom: 20px;
         text-align: center;
         text-overflow: ellipsis;
         p{
             font-size: 16px;
             line-height: 26px;
-            margin-top: 20px;
+            
         }
         >img{
             width: 70px;
             height: 70px;
+            border-radius: 35px;
+            margin-bottom: 20px;
+        }
+        >.name{
+            margin-bottom: 20px;
         }
         .phone{
             margin: 0;

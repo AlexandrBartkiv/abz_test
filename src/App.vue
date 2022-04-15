@@ -7,38 +7,34 @@
   </div>
   <div class="get">
     <h1>Working with <br> GET request</h1>
-    <User
-      v-for="user in state.users"
-      :key="user.id"></User>
+    <UserList
+    :users="users"></UserList>
   </div>
 </template>
 
 <script>
 import Header from './components/VueHeader.vue'
-import User from './components/UserCard.vue'
+import UserList from './components/UserList.vue'
 import axios from 'axios'
-import { reactive } from '@vue/reactivity'
-import { provide } from '@vue/runtime-core'
+import { ref } from '@vue/reactivity'
 
 export default {
   name: 'App',
   components: {
     Header,
-    User
+    UserList
   },
   setup() {
-    const state = reactive({})
+    const users = ref([])
     async function getUsers(){
-      const {data} = await axios.get('https://frontend-test-assignment-api.abz.agency/api/v1/users?page=1&count=5')
-      state.users = data
+      const {data} = await axios.get('https://frontend-test-assignment-api.abz.agency/api/v1/users?page=1&count=6')
+      users.value = data.users
     }
   getUsers()
   
-  provide('state')
-
-   console.log(state)
+  console.log(users)
   return{
-      state,
+      users,
     }
   }
 }

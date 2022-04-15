@@ -1,10 +1,11 @@
 <template>
-  <div class="card">
-    <img src="" alt="">
-    <p>{{users.name}}</p>
-    <p>{{users.position}}</p>
-    <p>{{users.email}}</p>
-    <p class="phone">{{users.phone}}</p>
+  <div 
+  class="card">
+    <img :src="user.photo" alt="">
+    <p class="name">{{user.name}}</p>
+    <p class="pos">{{user.position}}<br>{{user.email}}</p>
+    
+    <p class="phone">{{user.phone}}</p>
       <!-- <p>Salvador Stewart Flynn Thomas Salva...</p>
       <p>Leading specialist of the department o...
 JeromeKlarkaJeromeKlarka19233623...
@@ -14,14 +15,17 @@ JeromeKlarkaJeromeKlarka19233623...
 </template>
 
 <script>
-import {inject, reactive} from 'vue'
+
 export default {
+ props:{
+   user:{
+     type: Object,
+     required: true,
+   }
+ },
     setup() {
-        const state = reactive({})
-         state.users = inject('state')
-        console.log(state)
         return{
-            state
+            
         }
     }
 }
