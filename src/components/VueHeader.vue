@@ -1,14 +1,18 @@
 <template>
   <header>
     <img src="../assets/Logo.svg" alt="" srcset="">
-    <button class="users">Users</button>
-    <button class="singnUp">Sign Up </button>
+    <Mybutton>Users</Mybutton>
+    <Mybutton>Sign Up</Mybutton>
   </header>
 </template>
 
 <script>
+import Mybutton from '..//UI/MyButton.vue'
 export default {
   name: 'VueHeader',
+  components:{
+    Mybutton
+  },
   props: {
     msg: String
   }

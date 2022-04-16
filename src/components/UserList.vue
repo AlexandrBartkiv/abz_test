@@ -24,3 +24,8 @@ props:{
     },
 }
 </script>
+<style scoped>
+div{
+    margin-bottom: 30px;
+}
+</style>

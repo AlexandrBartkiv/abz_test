@@ -20,14 +20,6 @@ header {
   padding: 0 16px 0 16px;
 }
 
-header > button {
-  width: 100px;
-  height: 34px;
-  border-radius: 20px;
-  font-family: 'Nunito', sans-serif;
-  background-color: #f4e041;
-}
-
 .field {
   width: 360px;
   height: 500px;
@@ -50,7 +42,7 @@ header > button {
   color: white;
 }
 
-.field > h1 {
+.field h1 {
   margin: 40px 0 21px 0;
   width: 328px;
   height: 120px;
@@ -120,7 +112,7 @@ header > button {
       -ms-flex-pack: start;
           justify-content: start;
   font-family: "Nunito", sans-serif;
-  background-color: #e71010;
+  background-color: white;
   border-radius: 10px;
   width: 328px;
   max-height: 254px;
@@ -130,9 +122,13 @@ header > button {
   text-overflow: ellipsis;
 }
 
-.get .card p {
+.get .card > p {
   font-size: 16px;
   line-height: 26px;
+  max-width: 242px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .get .card > img {
@@ -148,4 +144,29 @@ header > button {
 
 .get .card .phone {
   margin: 0;
+}
+
+.post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.post > h1 {
+  margin: 140px 0 21px 0;
+  width: 328px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-family: "Nunito", sans-serif;
 }
