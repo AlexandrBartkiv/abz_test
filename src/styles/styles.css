@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-* h1, * p {
+* h1, * p, * input {
   padding: 0;
   margin: 0;
 }
@@ -153,12 +153,14 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .post > h1 {
-  margin: 140px 0 21px 0;
+  margin: 140px 0 50px 0;
   width: 328px;
-  height: 120px;
+  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,4 +171,48 @@ header {
   text-align: center;
   line-height: 40px;
   font-family: "Nunito", sans-serif;
+}
+
+.post .Form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.post .Form > .inpText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 328px;
+  height: 258px;
+}
+
+.post .Form > .inpText > input {
+  height: 54px;
+}
+
+.post .Form > .inpRadio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 161px;
+  width: 328px;
+}
+
+.post .Form > .inpRadio > input {
+  width: 100%;
 }

@@ -18,7 +18,7 @@
   </div>
   <div class="post">
     <h1>Working with POST request</h1>
-    
+      <VueForm></VueForm>
   </div>
 </template>
 
@@ -26,6 +26,7 @@
 import Header from './components/VueHeader.vue'
 import UserList from './components/UserList.vue'
 import Mybutton from './UI/MyButton.vue'
+import VueForm from './components/VueForm.vue'
 import axios from 'axios'
 import { ref } from '@vue/reactivity'
 
@@ -34,7 +35,8 @@ export default {
   components: {
     Header,
     UserList,
-    Mybutton
+    Mybutton,
+    VueForm
   },
   setup() {
     const users = ref([])
