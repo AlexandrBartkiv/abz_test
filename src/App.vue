@@ -45,24 +45,24 @@ export default {
   async function getUsers(){
     const {data} = await axios.get('https://frontend-test-assignment-api.abz.agency/api/v1/users?page=1&count=6')
     users.value = data.users
-    console.log(data)
-    console.log(users.value)
+    // console.log(data)
+    // console.log(users.value)
     users.value.sort((b,a) => a.registration_timestamp<b.registration_timestamp ? -1:1)
-    console.log(users.value)
+    // console.log(users.value)
     nextpage.value = data.links.next_url
-    console.log(nextpage.value)
+    // console.log(nextpage.value)
   }
   getUsers()
 
   async function showMore(){
-    console.log('111')
+    // console.log('111')
     const {data} = await axios.get(nextpage.value)
     users.value = data.users
-    console.log(users.value)
+    // console.log(users.value)
     users.value.sort((b,a) => a.registration_timestamp<b.registration_timestamp ? -1:1)
-    console.log(users.value)
+    // console.log(users.value)
     nextpage.value = data.links.next_url
-    console.log(nextpage.value)
+    // console.log(nextpage.value)
   }
   
   
